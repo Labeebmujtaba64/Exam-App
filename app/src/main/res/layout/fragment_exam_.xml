@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/exam_fragment"
+    tools:context=".exam_fragment.Exam_Fragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/exam_frame_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/Exams_Button_MaterialcCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+
+            app:cardBackgroundColor="#CEFFFFFF"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="2dp"
+            app:cardForegroundColor="#00FFFFFF"
+            app:checkedIconTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#31FFFFFF">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutblue"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#14005A"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageViewgreendot1"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/greendot" />
+
+                    <ImageView
+                        android:id="@+id/Calender_Image"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toEndOf="@+id/LiveTextView"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/calendar" />
+
+                    <ImageView
+                        android:id="@+id/Clock_image"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        app:layout_constraintEnd_toStartOf="@+id/Time_in_LiveExam_recycler"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/clock1" />
+
+                    <TextView
+                        android:id="@+id/LiveTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="7dp"
+                        android:text="Live"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewgreendot1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Date_in_LiveExam_recyclerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Fri 01 Jan, 2021"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintStart_toEndOf="@+id/Calender_Image"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Time_in_LiveExam_recycler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="3:00pm"
+                        android:textColor="#FFFFFF"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/liveExam_recyclerview_image"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/capimage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutblue" />
+
+                <TextView
+                    android:id="@+id/SSCExam_2020"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="12dp"
+                    android:text="SSC Exam 2020"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/liveExam_recyclerview_image"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutblue" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView_Give_and_win"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#27AC0F"
+                    app:cardBackgroundColor="#14005A"
+                    app:layout_constraintStart_toEndOf="@+id/liveExam_recyclerview_image"
+                    app:layout_constraintTop_toBottomOf="@+id/SSCExam_2020"
+                    tools:ignore="MissingConstraints">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/materialCardView_Give_and_win"
+                        app:layout_constraintEnd_toEndOf="@+id/materialCardView_Give_and_win"
+                        app:layout_constraintStart_toStartOf="@+id/materialCardView_Give_and_win"
+                        app:layout_constraintTop_toTopOf="@+id/materialCardView_Give_and_win">
+
+
+                        <ImageView
+                            android:id="@+id/imageViewcup"
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cup"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textViewGive_and_win"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:text="@string/give_win"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageViewcup"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageViewdollar"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginLeft="1dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textViewGive_and_win"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/dollarwhite" />
+
+                        <TextView
+                            android:id="@+id/textViewLakh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:text="Lakh"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageViewdollar"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <Button
+                    android:id="@+id/startQuiz_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="start"
+                    android:text="View"
+                    android:textAlignment="viewStart"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#27AC0F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/SSCExam_2020" />
+
+                <Button
+                    android:id="@+id/viewDetails_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:text="Fee 10/-"
+                    android:textAlignment="center"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#27AC0F"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/startQuiz_button" />
+
+                <ImageView
+                    android:id="@+id/imageViewgreendot2"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/liveExam_recyclerview_image"
+                    app:srcCompat="@drawable/greendot" />
+
+                <TextView
+                    android:id="@+id/Examiner_Details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:text="354 Examiner"
+                    android:textColor="#000"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewgreendot2"
+                    app:layout_constraintTop_toBottomOf="@+id/liveExam_recyclerview_image" />
+
+                <TextView
+                    android:id="@+id/textViewEntry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Entry :"
+                    android:textColor="#000"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/Examiner_Details"
+                    app:layout_constraintTop_toBottomOf="@+id/liveExam_recyclerview_image" />
+
+                <ImageView
+                    android:id="@+id/imageViewdollar2"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewEntry"
+                    app:layout_constraintTop_toBottomOf="@+id/liveExam_recyclerview_image"
+                    app:srcCompat="@drawable/dollar" />
+
+                <TextView
+                    android:id="@+id/Entry_Prize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="5dp"
+                    android:text="2000"
+                    android:textColor="#000"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewdollar2"
+                    app:layout_constraintTop_toBottomOf="@+id/liveExam_recyclerview_image" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+</FrameLayout>
